@@ -20,4 +20,5 @@ python resnet18_model.h5
 
 The output .tex file in tex_output can be compiled with pdfLaTeX.
 
-![vgg16](https://cloud.githubusercontent.com/assets/72940/26532609/61ff71aa-4405-11e7-9827-6cc4b12550dc.png)
+![resnet18](https://github.com/AshivDhondea/keras2tikz/blob/master/png_display/resnet18_model._tikz-1.png)
+![vgg16](https://github.com/AshivDhondea/keras2tikz/blob/master/png_display/vgg16_model._tikz-1.png)
