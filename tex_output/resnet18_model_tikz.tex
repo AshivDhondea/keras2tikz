@@ -1,0 +1,320 @@
+\documentclass{article}
+\usepackage[x11names, svgnames, rgb]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{snakes,arrows,shapes}
+\usepackage{amsmath}
+%
+%
+
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{0pt}%
+
+%
+
+\begin{document}
+\pagestyle{empty}
+%
+%
+%
+
+\enlargethispage{100cm}
+% Start of code
+\begin{tikzpicture}[>=latex',line join=bevel,]
+%%
+\node (139622569686632) at (109.5bp,7497.0bp) [draw=red,rectangle] {Input};
+  \node (139622569274392) at (109.5bp,7410.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622569275232) at (109.5bp,7323.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622569415512) at (109.5bp,7236.0bp) [draw,rectangle] {Conv2D};
+  \node (139622569416296) at (109.5bp,7149.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622569417136) at (109.5bp,7062.0bp) [draw,rectangle] {Activation};
+  \node (139622569417528) at (109.5bp,6975.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622569418032) at (109.5bp,6888.0bp) [draw,rectangle] {MaxPooling2D 3x3};
+  \node (139622569418592) at (109.5bp,6801.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622569071336) at (109.5bp,6714.0bp) [draw,rectangle] {Activation};
+  \node (139622569071728) at (62.5bp,6627.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622569108368) at (157.5bp,6573.0bp) [draw,rectangle] {Conv2D};
+  \node (139622569072232) at (57.5bp,6519.0bp) [draw,rectangle] {Conv2D};
+  \node (139622569073016) at (63.5bp,6432.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622569073856) at (70.5bp,6345.0bp) [draw,rectangle] {Activation};
+  \node (139622569074248) at (73.5bp,6258.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622569107584) at (73.5bp,6171.0bp) [draw,rectangle] {Conv2D};
+  \node (139622569109152) at (115.5bp,6084.0bp) [draw,rectangle] {Add};
+  \node (139622569109656) at (69.5bp,5997.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622569135240) at (121.5bp,5301.0bp) [draw,rectangle] {Add};
+  \node (139622569110496) at (69.5bp,5910.0bp) [draw,rectangle] {Activation};
+  \node (139622569110888) at (69.5bp,5823.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622569111392) at (69.5bp,5736.0bp) [draw,rectangle] {Conv2D};
+  \node (139622569132720) at (69.5bp,5649.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622569133560) at (70.5bp,5562.0bp) [draw,rectangle] {Activation};
+  \node (139622569133952) at (79.5bp,5475.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622569134456) at (80.5bp,5388.0bp) [draw,rectangle] {Conv2D};
+  \node (139622569135744) at (121.5bp,5214.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622569177608) at (121.5bp,5127.0bp) [draw,rectangle] {Activation};
+  \node (139622569178000) at (71.5bp,5040.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622570592184) at (169.5bp,4986.0bp) [draw,rectangle] {Conv2D};
+  \node (139622569178504) at (72.5bp,4932.0bp) [draw,rectangle] {Conv2D};
+  \node (139622569179288) at (75.5bp,4845.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622569180128) at (79.5bp,4758.0bp) [draw,rectangle] {Activation};
+  \node (139622569180520) at (79.5bp,4671.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622569181024) at (81.5bp,4584.0bp) [draw,rectangle] {Conv2D};
+  \node (139622570591344) at (124.5bp,4497.0bp) [draw,rectangle] {Add};
+  \node (139622570590840) at (76.5bp,4410.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622570924968) at (124.5bp,3714.0bp) [draw,rectangle] {Add};
+  \node (139622570557336) at (74.5bp,4323.0bp) [draw,rectangle] {Activation};
+  \node (139622570556944) at (73.5bp,4236.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622570556496) at (73.5bp,4149.0bp) [draw,rectangle] {Conv2D};
+  \node (139622570555936) at (75.5bp,4062.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622570554928) at (81.5bp,3975.0bp) [draw,rectangle] {Activation};
+  \node (139622570962392) at (81.5bp,3888.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622570925752) at (81.5bp,3801.0bp) [draw,rectangle] {Conv2D};
+  \node (139622570924464) at (124.5bp,3627.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622570923624) at (124.5bp,3540.0bp) [draw,rectangle] {Activation};
+  \node (139622570923232) at (71.5bp,3453.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622571238848) at (176.5bp,3399.0bp) [draw,rectangle] {Conv2D};
+  \node (139622570922728) at (76.5bp,3345.0bp) [draw,rectangle] {Conv2D};
+  \node (139622570844792) at (82.5bp,3258.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622571294448) at (86.5bp,3171.0bp) [draw,rectangle] {Activation};
+  \node (139622571294056) at (86.5bp,3084.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622571293552) at (87.5bp,2997.0bp) [draw,rectangle] {Conv2D};
+  \node (139622571237504) at (131.5bp,2910.0bp) [draw,rectangle] {Add};
+  \node (139622571225040) at (85.5bp,2823.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622620530728) at (133.5bp,2127.0bp) [draw,rectangle] {Add};
+  \node (139622571223864) at (83.5bp,2736.0bp) [draw,rectangle] {Activation};
+  \node (139622571223472) at (83.5bp,2649.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622571222968) at (82.5bp,2562.0bp) [draw,rectangle] {Conv2D};
+  \node (139622571222240) at (84.5bp,2475.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622571075344) at (87.5bp,2388.0bp) [draw,rectangle] {Activation};
+  \node (139622620532072) at (90.5bp,2301.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622620530112) at (90.5bp,2214.0bp) [draw,rectangle] {Conv2D};
+  \node (139622620528824) at (133.5bp,2040.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622620523432) at (133.5bp,1953.0bp) [draw,rectangle] {Activation};
+  \node (139622620523040) at (80.5bp,1866.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622620490384) at (185.5bp,1812.0bp) [draw,rectangle] {Conv2D};
+  \node (139622620522536) at (85.5bp,1758.0bp) [draw,rectangle] {Conv2D};
+  \node (139622620521752) at (91.5bp,1671.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622620520800) at (100.5bp,1584.0bp) [draw,rectangle] {Activation};
+  \node (139622620491672) at (103.5bp,1497.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622620491168) at (111.5bp,1410.0bp) [draw,rectangle] {Conv2D};
+  \node (139622620489600) at (147.5bp,1323.0bp) [draw,rectangle] {Add};
+  \node (139622620489096) at (101.5bp,1236.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622620464016) at (156.5bp,540.0bp) [draw,rectangle] {Add};
+  \node (139622620488256) at (101.5bp,1149.0bp) [draw,rectangle] {Activation};
+  \node (139622620471136) at (101.5bp,1062.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622620470352) at (101.5bp,975.0bp) [draw,rectangle] {Conv2D};
+  \node (139622620466592) at (101.5bp,888.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622620465696) at (108.5bp,801.0bp) [draw,rectangle] {Activation};
+  \node (139622620465304) at (112.5bp,714.0bp) [draw,rectangle] {ZeroPadding2D};
+  \node (139622620464800) at (120.5bp,627.0bp) [draw,rectangle] {Conv2D};
+  \node (139622620463512) at (156.5bp,453.0bp) [draw,rectangle] {BatchNormalization};
+  \node (139622620462608) at (156.5bp,366.0bp) [draw,rectangle] {Activation};
+  \node (139622620462160) at (156.5bp,279.0bp) [draw,rectangle] {GlobalAveragePooling2D};
+  \node (139622620461712) at (156.5bp,192.0bp) [draw,rectangle] {Dense 1000};
+  \node (139622620461040) at (156.5bp,105.0bp) [draw,rectangle] {Activation};
+  \node (output_node) at (156.5bp,18.0bp) [draw,rectangle] {Output};
+  \draw [->] (139622569686632) ..controls (109.5bp,7467.2bp) and (109.5bp,7451.6bp)  .. (139622569274392);
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (145.5bp,7453.5bp) node {(224, 224, 3)};
+  \draw [->] (139622569274392) ..controls (109.5bp,7380.2bp) and (109.5bp,7364.6bp)  .. (139622569275232);
+  \draw (145.5bp,7366.5bp) node {(224, 224, 3)};
+  \draw [->] (139622569275232) ..controls (109.5bp,7293.2bp) and (109.5bp,7277.6bp)  .. (139622569415512);
+  \draw (145.5bp,7279.5bp) node {(230, 230, 3)};
+  \draw [->] (139622569415512) ..controls (109.5bp,7206.2bp) and (109.5bp,7190.6bp)  .. (139622569416296);
+  \draw (149.0bp,7192.5bp) node {(112, 112, 64)};
+  \draw [->] (139622569416296) ..controls (109.5bp,7119.2bp) and (109.5bp,7103.6bp)  .. (139622569417136);
+  \draw (149.0bp,7105.5bp) node {(112, 112, 64)};
+  \draw [->] (139622569417136) ..controls (109.5bp,7032.2bp) and (109.5bp,7016.6bp)  .. (139622569417528);
+  \draw (149.0bp,7018.5bp) node {(112, 112, 64)};
+  \draw [->] (139622569417528) ..controls (109.5bp,6945.2bp) and (109.5bp,6929.6bp)  .. (139622569418032);
+  \draw (149.0bp,6931.5bp) node {(114, 114, 64)};
+  \draw [->] (139622569418032) ..controls (109.5bp,6858.2bp) and (109.5bp,6842.6bp)  .. (139622569418592);
+  \draw (142.0bp,6844.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569418592) ..controls (109.5bp,6771.2bp) and (109.5bp,6755.6bp)  .. (139622569071336);
+  \draw (142.0bp,6757.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569071336) ..controls (77.349bp,6690.7bp) and (72.024bp,6684.7bp)  .. (68.5bp,6678.0bp) .. controls (64.909bp,6671.2bp) and (63.061bp,6663.1bp)  .. (139622569071728);
+  \draw (101.0bp,6670.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569071336) ..controls (127.23bp,6690.2bp) and (130.89bp,6684.1bp)  .. (133.5bp,6678.0bp) .. controls (144.19bp,6653.2bp) and (150.46bp,6622.9bp)  .. (139622569108368);
+  \draw (172.0bp,6670.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569071728) ..controls (54.824bp,6603.2bp) and (53.306bp,6596.9bp)  .. (52.5bp,6591.0bp) .. controls (50.537bp,6576.6bp) and (51.379bp,6560.5bp)  .. (139622569072232);
+  \draw (85.0bp,6573.0bp) node {(58, 58, 64)};
+  \draw [->] (139622569072232) ..controls (59.556bp,6489.2bp) and (60.634bp,6473.6bp)  .. (139622569073016);
+  \draw (94.0bp,6475.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569073016) ..controls (65.898bp,6402.2bp) and (67.156bp,6386.6bp)  .. (139622569073856);
+  \draw (100.0bp,6388.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569073856) ..controls (71.528bp,6315.2bp) and (72.067bp,6299.6bp)  .. (139622569074248);
+  \draw (105.0bp,6301.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569074248) ..controls (73.5bp,6228.2bp) and (73.5bp,6212.6bp)  .. (139622569107584);
+  \draw (106.0bp,6214.5bp) node {(58, 58, 64)};
+  \draw [->] (139622569107584) ..controls (71.635bp,6142.6bp) and (72.679bp,6130.1bp)  .. (77.5bp,6120.0bp) .. controls (79.213bp,6116.4bp) and (81.45bp,6113.0bp)  .. (139622569109152);
+  \draw (110.0bp,6127.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569108368) ..controls (156.91bp,6535.1bp) and (156.5bp,6503.1bp)  .. (156.5bp,6475.5bp) .. controls (156.5bp,6475.5bp) and (156.5bp,6475.5bp)  .. (156.5bp,6171.0bp) .. controls (156.5bp,6147.5bp) and (152.84bp,6141.1bp)  .. (142.5bp,6120.0bp) .. controls (140.94bp,6116.8bp) and (139.08bp,6113.6bp)  .. (139622569109152);
+  \draw (189.0bp,6345.0bp) node {(56, 56, 64)};
+  \draw [->] (139622569109152) ..controls (90.831bp,6060.6bp) and (85.969bp,6054.4bp)  .. (82.5bp,6048.0bp) .. controls (78.735bp,6041.0bp) and (76.029bp,6032.9bp)  .. (139622569109656);
+  \draw (115.0bp,6040.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569109152) ..controls (139.33bp,6060.5bp) and (144.07bp,6054.3bp)  .. (147.5bp,6048.0bp) .. controls (158.71bp,6027.3bp) and (161.5bp,6020.5bp)  .. (161.5bp,5997.0bp) .. controls (161.5bp,5997.0bp) and (161.5bp,5997.0bp)  .. (161.5bp,5388.0bp) .. controls (161.5bp,5364.5bp) and (157.65bp,5358.2bp)  .. (147.5bp,5337.0bp) .. controls (145.99bp,5333.8bp) and (144.2bp,5330.7bp)  .. (139622569135240);
+  \draw (194.0bp,5692.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569109656) ..controls (69.5bp,5967.2bp) and (69.5bp,5951.6bp)  .. (139622569110496);
+  \draw (102.0bp,5953.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569110496) ..controls (69.5bp,5880.2bp) and (69.5bp,5864.6bp)  .. (139622569110888);
+  \draw (102.0bp,5866.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569110888) ..controls (69.5bp,5793.2bp) and (69.5bp,5777.6bp)  .. (139622569111392);
+  \draw (102.0bp,5779.5bp) node {(58, 58, 64)};
+  \draw [->] (139622569111392) ..controls (69.5bp,5706.2bp) and (69.5bp,5690.6bp)  .. (139622569132720);
+  \draw (102.0bp,5692.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569132720) ..controls (69.843bp,5619.2bp) and (70.022bp,5603.6bp)  .. (139622569133560);
+  \draw (103.0bp,5605.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569133560) ..controls (73.584bp,5532.2bp) and (75.201bp,5516.6bp)  .. (139622569133952);
+  \draw (109.0bp,5518.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569133952) ..controls (79.843bp,5445.2bp) and (80.022bp,5429.6bp)  .. (139622569134456);
+  \draw (113.0bp,5431.5bp) node {(58, 58, 64)};
+  \draw [->] (139622569134456) ..controls (77.265bp,5359.7bp) and (77.823bp,5347.1bp)  .. (82.5bp,5337.0bp) .. controls (84.189bp,5333.3bp) and (86.44bp,5329.9bp)  .. (139622569135240);
+  \draw (115.0bp,5344.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569135240) ..controls (121.5bp,5271.2bp) and (121.5bp,5255.6bp)  .. (139622569135744);
+  \draw (154.0bp,5257.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569135744) ..controls (121.5bp,5184.2bp) and (121.5bp,5168.6bp)  .. (139622569177608);
+  \draw (154.0bp,5170.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569177608) ..controls (89.613bp,5103.6bp) and (84.216bp,5097.6bp)  .. (80.5bp,5091.0bp) .. controls (76.681bp,5084.2bp) and (74.416bp,5076.2bp)  .. (139622569178000);
+  \draw (113.0bp,5083.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569177608) ..controls (139.23bp,5103.2bp) and (142.89bp,5097.1bp)  .. (145.5bp,5091.0bp) .. controls (156.19bp,5066.2bp) and (162.46bp,5035.9bp)  .. (139622570592184);
+  \draw (184.0bp,5083.5bp) node {(56, 56, 64)};
+  \draw [->] (139622569178000) ..controls (66.124bp,5016.1bp) and (65.062bp,5009.8bp)  .. (64.5bp,5004.0bp) .. controls (62.966bp,4988.1bp) and (62.754bp,4983.9bp)  .. (64.5bp,4968.0bp) .. controls (64.781bp,4965.4bp) and (65.172bp,4962.8bp)  .. (139622569178504);
+  \draw (97.0bp,4986.0bp) node {(58, 58, 64)};
+  \draw [->] (139622569178504) ..controls (73.528bp,4902.2bp) and (74.067bp,4886.6bp)  .. (139622569179288);
+  \draw (110.5bp,4888.5bp) node {(28, 28, 128)};
+  \draw [->] (139622569179288) ..controls (76.87bp,4815.2bp) and (77.589bp,4799.6bp)  .. (139622569180128);
+  \draw (114.5bp,4801.5bp) node {(28, 28, 128)};
+  \draw [->] (139622569180128) ..controls (79.5bp,4728.2bp) and (79.5bp,4712.6bp)  .. (139622569180520);
+  \draw (115.5bp,4714.5bp) node {(28, 28, 128)};
+  \draw [->] (139622569180520) ..controls (80.185bp,4641.2bp) and (80.545bp,4625.6bp)  .. (139622569181024);
+  \draw (117.5bp,4627.5bp) node {(30, 30, 128)};
+  \draw [->] (139622569181024) ..controls (77.422bp,4555.6bp) and (77.738bp,4543.1bp)  .. (82.5bp,4533.0bp) .. controls (84.443bp,4528.9bp) and (87.106bp,4525.1bp)  .. (139622570591344);
+  \draw (118.5bp,4540.5bp) node {(28, 28, 128)};
+  \draw [->] (139622570592184) ..controls (168.91bp,4948.1bp) and (168.5bp,4916.1bp)  .. (168.5bp,4888.5bp) .. controls (168.5bp,4888.5bp) and (168.5bp,4888.5bp)  .. (168.5bp,4584.0bp) .. controls (168.5bp,4560.5bp) and (165.38bp,4553.8bp)  .. (154.5bp,4533.0bp) .. controls (152.78bp,4529.7bp) and (150.72bp,4526.4bp)  .. (139622570591344);
+  \draw (204.5bp,4758.0bp) node {(28, 28, 128)};
+  \draw [->] (139622570591344) ..controls (91.57bp,4473.8bp) and (86.113bp,4467.8bp)  .. (82.5bp,4461.0bp) .. controls (78.868bp,4454.2bp) and (77.007bp,4446.1bp)  .. (139622570590840);
+  \draw (118.5bp,4453.5bp) node {(28, 28, 128)};
+  \draw [->] (139622570591344) ..controls (146.81bp,4473.3bp) and (151.26bp,4467.2bp)  .. (154.5bp,4461.0bp) .. controls (165.38bp,4440.2bp) and (168.5bp,4433.5bp)  .. (168.5bp,4410.0bp) .. controls (168.5bp,4410.0bp) and (168.5bp,4410.0bp)  .. (168.5bp,3801.0bp) .. controls (168.5bp,3777.5bp) and (165.38bp,3770.8bp)  .. (154.5bp,3750.0bp) .. controls (152.78bp,3746.7bp) and (150.72bp,3743.4bp)  .. (139622570924968);
+  \draw (204.5bp,4105.5bp) node {(28, 28, 128)};
+  \draw [->] (139622570590840) ..controls (75.815bp,4380.2bp) and (75.455bp,4364.6bp)  .. (139622570557336);
+  \draw (112.5bp,4366.5bp) node {(28, 28, 128)};
+  \draw [->] (139622570557336) ..controls (74.157bp,4293.2bp) and (73.978bp,4277.6bp)  .. (139622570556944);
+  \draw (110.5bp,4279.5bp) node {(28, 28, 128)};
+  \draw [->] (139622570556944) ..controls (73.5bp,4206.2bp) and (73.5bp,4190.6bp)  .. (139622570556496);
+  \draw (109.5bp,4192.5bp) node {(30, 30, 128)};
+  \draw [->] (139622570556496) ..controls (74.005bp,4120.9bp) and (74.244bp,4108.8bp)  .. (74.5bp,4098.0bp) .. controls (74.557bp,4095.6bp) and (74.621bp,4093.1bp)  .. (139622570555936);
+  \draw (110.5bp,4105.5bp) node {(28, 28, 128)};
+  \draw [->] (139622570555936) ..controls (77.556bp,4032.2bp) and (78.634bp,4016.6bp)  .. (139622570554928);
+  \draw (115.5bp,4018.5bp) node {(28, 28, 128)};
+  \draw [->] (139622570554928) ..controls (81.5bp,3945.2bp) and (81.5bp,3929.6bp)  .. (139622570962392);
+  \draw (117.5bp,3931.5bp) node {(28, 28, 128)};
+  \draw [->] (139622570962392) ..controls (81.5bp,3858.2bp) and (81.5bp,3842.6bp)  .. (139622570925752);
+  \draw (117.5bp,3844.5bp) node {(30, 30, 128)};
+  \draw [->] (139622570925752) ..controls (77.422bp,3772.6bp) and (77.738bp,3760.1bp)  .. (82.5bp,3750.0bp) .. controls (84.443bp,3745.9bp) and (87.106bp,3742.1bp)  .. (139622570924968);
+  \draw (118.5bp,3757.5bp) node {(28, 28, 128)};
+  \draw [->] (139622570924968) ..controls (124.5bp,3684.2bp) and (124.5bp,3668.6bp)  .. (139622570924464);
+  \draw (160.5bp,3670.5bp) node {(28, 28, 128)};
+  \draw [->] (139622570924464) ..controls (124.5bp,3597.2bp) and (124.5bp,3581.6bp)  .. (139622570923624);
+  \draw (160.5bp,3583.5bp) node {(28, 28, 128)};
+  \draw [->] (139622570923624) ..controls (89.996bp,3516.6bp) and (84.391bp,3510.6bp)  .. (80.5bp,3504.0bp) .. controls (76.501bp,3497.2bp) and (74.188bp,3489.0bp)  .. (139622570923232);
+  \draw (116.5bp,3496.5bp) node {(28, 28, 128)};
+  \draw [->] (139622570923624) ..controls (145.27bp,3516.5bp) and (149.51bp,3510.3bp)  .. (152.5bp,3504.0bp) .. controls (164.14bp,3479.5bp) and (170.3bp,3449.0bp)  .. (139622571238848);
+  \draw (193.5bp,3496.5bp) node {(28, 28, 128)};
+  \draw [->] (139622570923232) ..controls (64.29bp,3420.3bp) and (61.543bp,3399.2bp)  .. (64.5bp,3381.0bp) .. controls (64.94bp,3378.3bp) and (65.555bp,3375.5bp)  .. (139622570922728);
+  \draw (100.5bp,3399.0bp) node {(30, 30, 128)};
+  \draw [->] (139622570922728) ..controls (78.556bp,3315.2bp) and (79.634bp,3299.6bp)  .. (139622570844792);
+  \draw (116.5bp,3301.5bp) node {(14, 14, 256)};
+  \draw [->] (139622570844792) ..controls (83.87bp,3228.2bp) and (84.589bp,3212.6bp)  .. (139622571294448);
+  \draw (121.5bp,3214.5bp) node {(14, 14, 256)};
+  \draw [->] (139622571294448) ..controls (86.5bp,3141.2bp) and (86.5bp,3125.6bp)  .. (139622571294056);
+  \draw (122.5bp,3127.5bp) node {(14, 14, 256)};
+  \draw [->] (139622571294056) ..controls (86.843bp,3054.2bp) and (87.022bp,3038.6bp)  .. (139622571293552);
+  \draw (123.5bp,3040.5bp) node {(16, 16, 256)};
+  \draw [->] (139622571293552) ..controls (84.076bp,2968.6bp) and (84.637bp,2956.1bp)  .. (89.5bp,2946.0bp) .. controls (91.483bp,2941.9bp) and (94.172bp,2938.1bp)  .. (139622571237504);
+  \draw (125.5bp,2953.5bp) node {(14, 14, 256)};
+  \draw [->] (139622571238848) ..controls (175.91bp,3361.1bp) and (175.5bp,3329.1bp)  .. (175.5bp,3301.5bp) .. controls (175.5bp,3301.5bp) and (175.5bp,3301.5bp)  .. (175.5bp,2997.0bp) .. controls (175.5bp,2973.5bp) and (172.38bp,2966.8bp)  .. (161.5bp,2946.0bp) .. controls (159.78bp,2942.7bp) and (157.72bp,2939.4bp)  .. (139622571237504);
+  \draw (211.5bp,3171.0bp) node {(14, 14, 256)};
+  \draw [->] (139622571237504) ..controls (100.13bp,2886.6bp) and (94.935bp,2880.6bp)  .. (91.5bp,2874.0bp) .. controls (87.951bp,2867.1bp) and (86.116bp,2859.1bp)  .. (139622571225040);
+  \draw (127.5bp,2866.5bp) node {(14, 14, 256)};
+  \draw [->] (139622571237504) ..controls (155.33bp,2886.5bp) and (160.07bp,2880.3bp)  .. (163.5bp,2874.0bp) .. controls (174.71bp,2853.3bp) and (177.5bp,2846.5bp)  .. (177.5bp,2823.0bp) .. controls (177.5bp,2823.0bp) and (177.5bp,2823.0bp)  .. (177.5bp,2214.0bp) .. controls (177.5bp,2190.5bp) and (174.38bp,2183.8bp)  .. (163.5bp,2163.0bp) .. controls (161.78bp,2159.7bp) and (159.72bp,2156.4bp)  .. (139622620530728);
+  \draw (213.5bp,2518.5bp) node {(14, 14, 256)};
+  \draw [->] (139622571225040) ..controls (84.815bp,2793.2bp) and (84.455bp,2777.6bp)  .. (139622571223864);
+  \draw (121.5bp,2779.5bp) node {(14, 14, 256)};
+  \draw [->] (139622571223864) ..controls (83.5bp,2706.2bp) and (83.5bp,2690.6bp)  .. (139622571223472);
+  \draw (119.5bp,2692.5bp) node {(14, 14, 256)};
+  \draw [->] (139622571223472) ..controls (83.157bp,2619.2bp) and (82.978bp,2603.6bp)  .. (139622571222968);
+  \draw (119.5bp,2605.5bp) node {(16, 16, 256)};
+  \draw [->] (139622571222968) ..controls (83.005bp,2533.9bp) and (83.244bp,2521.8bp)  .. (83.5bp,2511.0bp) .. controls (83.557bp,2508.6bp) and (83.621bp,2506.1bp)  .. (139622571222240);
+  \draw (119.5bp,2518.5bp) node {(14, 14, 256)};
+  \draw [->] (139622571222240) ..controls (85.528bp,2445.2bp) and (86.067bp,2429.6bp)  .. (139622571075344);
+  \draw (122.5bp,2431.5bp) node {(14, 14, 256)};
+  \draw [->] (139622571075344) ..controls (88.528bp,2358.2bp) and (89.067bp,2342.6bp)  .. (139622620532072);
+  \draw (125.5bp,2344.5bp) node {(14, 14, 256)};
+  \draw [->] (139622620532072) ..controls (90.5bp,2271.2bp) and (90.5bp,2255.6bp)  .. (139622620530112);
+  \draw (126.5bp,2257.5bp) node {(16, 16, 256)};
+  \draw [->] (139622620530112) ..controls (86.422bp,2185.6bp) and (86.738bp,2173.1bp)  .. (91.5bp,2163.0bp) .. controls (93.443bp,2158.9bp) and (96.106bp,2155.1bp)  .. (139622620530728);
+  \draw (127.5bp,2170.5bp) node {(14, 14, 256)};
+  \draw [->] (139622620530728) ..controls (133.5bp,2097.2bp) and (133.5bp,2081.6bp)  .. (139622620528824);
+  \draw (169.5bp,2083.5bp) node {(14, 14, 256)};
+  \draw [->] (139622620528824) ..controls (133.5bp,2010.2bp) and (133.5bp,1994.6bp)  .. (139622620523432);
+  \draw (169.5bp,1996.5bp) node {(14, 14, 256)};
+  \draw [->] (139622620523432) ..controls (98.996bp,1929.6bp) and (93.391bp,1923.6bp)  .. (89.5bp,1917.0bp) .. controls (85.501bp,1910.2bp) and (83.188bp,1902.0bp)  .. (139622620523040);
+  \draw (125.5bp,1909.5bp) node {(14, 14, 256)};
+  \draw [->] (139622620523432) ..controls (154.27bp,1929.5bp) and (158.51bp,1923.3bp)  .. (161.5bp,1917.0bp) .. controls (173.14bp,1892.5bp) and (179.3bp,1862.0bp)  .. (139622620490384);
+  \draw (202.5bp,1909.5bp) node {(14, 14, 256)};
+  \draw [->] (139622620523040) ..controls (73.29bp,1833.3bp) and (70.543bp,1812.2bp)  .. (73.5bp,1794.0bp) .. controls (73.94bp,1791.3bp) and (74.555bp,1788.5bp)  .. (139622620522536);
+  \draw (109.5bp,1812.0bp) node {(16, 16, 256)};
+  \draw [->] (139622620522536) ..controls (87.556bp,1728.2bp) and (88.634bp,1712.6bp)  .. (139622620521752);
+  \draw (118.5bp,1714.5bp) node {(7, 7, 512)};
+  \draw [->] (139622620521752) ..controls (94.584bp,1641.2bp) and (96.201bp,1625.6bp)  .. (139622620520800);
+  \draw (126.5bp,1627.5bp) node {(7, 7, 512)};
+  \draw [->] (139622620520800) ..controls (101.53bp,1554.2bp) and (102.07bp,1538.6bp)  .. (139622620491672);
+  \draw (131.5bp,1540.5bp) node {(7, 7, 512)};
+  \draw [->] (139622620491672) ..controls (106.24bp,1467.2bp) and (107.68bp,1451.6bp)  .. (139622620491168);
+  \draw (137.5bp,1453.5bp) node {(9, 9, 512)};
+  \draw [->] (139622620491168) ..controls (107.89bp,1381.8bp) and (108.2bp,1369.3bp)  .. (112.5bp,1359.0bp) .. controls (113.96bp,1355.5bp) and (115.94bp,1352.1bp)  .. (139622620489600);
+  \draw (141.5bp,1366.5bp) node {(7, 7, 512)};
+  \draw [->] (139622620490384) ..controls (184.91bp,1774.1bp) and (184.5bp,1742.1bp)  .. (184.5bp,1714.5bp) .. controls (184.5bp,1714.5bp) and (184.5bp,1714.5bp)  .. (184.5bp,1410.0bp) .. controls (184.5bp,1386.5bp) and (180.05bp,1380.5bp)  .. (170.5bp,1359.0bp) .. controls (169.14bp,1356.0bp) and (167.55bp,1352.9bp)  .. (139622620489600);
+  \draw (213.5bp,1584.0bp) node {(7, 7, 512)};
+  \draw [->] (139622620489600) ..controls (129.02bp,1299.3bp) and (124.82bp,1293.1bp)  .. (121.5bp,1287.0bp) .. controls (117.57bp,1279.8bp) and (114.02bp,1271.7bp)  .. (139622620489096);
+  \draw (150.5bp,1279.5bp) node {(7, 7, 512)};
+  \draw [->] (139622620489600) ..controls (171.33bp,1299.5bp) and (176.07bp,1293.3bp)  .. (179.5bp,1287.0bp) .. controls (190.71bp,1266.3bp) and (193.5bp,1259.5bp)  .. (193.5bp,1236.0bp) .. controls (193.5bp,1236.0bp) and (193.5bp,1236.0bp)  .. (193.5bp,627.0bp) .. controls (193.5bp,603.49bp) and (189.05bp,597.48bp)  .. (179.5bp,576.0bp) .. controls (178.14bp,572.95bp) and (176.55bp,569.86bp)  .. (139622620464016);
+  \draw (222.5bp,931.5bp) node {(7, 7, 512)};
+  \draw [->] (139622620489096) ..controls (101.5bp,1206.2bp) and (101.5bp,1190.6bp)  .. (139622620488256);
+  \draw (130.5bp,1192.5bp) node {(7, 7, 512)};
+  \draw [->] (139622620488256) ..controls (101.5bp,1119.2bp) and (101.5bp,1103.6bp)  .. (139622620471136);
+  \draw (130.5bp,1105.5bp) node {(7, 7, 512)};
+  \draw [->] (139622620471136) ..controls (101.5bp,1032.2bp) and (101.5bp,1016.6bp)  .. (139622620470352);
+  \draw (130.5bp,1018.5bp) node {(9, 9, 512)};
+  \draw [->] (139622620470352) ..controls (101.5bp,945.19bp) and (101.5bp,929.56bp)  .. (139622620466592);
+  \draw (130.5bp,931.5bp) node {(7, 7, 512)};
+  \draw [->] (139622620466592) ..controls (103.9bp,858.19bp) and (105.16bp,842.56bp)  .. (139622620465696);
+  \draw (134.5bp,844.5bp) node {(7, 7, 512)};
+  \draw [->] (139622620465696) ..controls (109.87bp,771.19bp) and (110.59bp,755.56bp)  .. (139622620465304);
+  \draw (140.5bp,757.5bp) node {(7, 7, 512)};
+  \draw [->] (139622620465304) ..controls (115.24bp,684.19bp) and (116.68bp,668.56bp)  .. (139622620464800);
+  \draw (146.5bp,670.5bp) node {(9, 9, 512)};
+  \draw [->] (139622620464800) ..controls (116.89bp,598.81bp) and (117.2bp,586.3bp)  .. (121.5bp,576.0bp) .. controls (122.96bp,572.5bp) and (124.94bp,569.14bp)  .. (139622620464016);
+  \draw (150.5bp,583.5bp) node {(7, 7, 512)};
+  \draw [->] (139622620464016) ..controls (156.5bp,510.19bp) and (156.5bp,494.56bp)  .. (139622620463512);
+  \draw (185.5bp,496.5bp) node {(7, 7, 512)};
+  \draw [->] (139622620463512) ..controls (156.5bp,423.19bp) and (156.5bp,407.56bp)  .. (139622620462608);
+  \draw (185.5bp,409.5bp) node {(7, 7, 512)};
+  \draw [->] (139622620462608) ..controls (156.5bp,336.19bp) and (156.5bp,320.56bp)  .. (139622620462160);
+  \draw (185.5bp,322.5bp) node {(7, 7, 512)};
+  \draw [->] (139622620462160) ..controls (156.5bp,249.19bp) and (156.5bp,233.56bp)  .. (139622620461712);
+  \draw (173.5bp,235.5bp) node {(512,)};
+  \draw [->] (139622620461712) ..controls (156.5bp,162.19bp) and (156.5bp,146.56bp)  .. (139622620461040);
+  \draw (176.5bp,148.5bp) node {(1000,)};
+  \draw [->] (139622620461040) ..controls (156.5bp,75.192bp) and (156.5bp,59.561bp)  .. (output_node);
+  \draw (176.5bp,61.5bp) node {(1000,)};
+%
+\end{tikzpicture}
+% End of code
+
+%
+\end{document}
+%
+
+

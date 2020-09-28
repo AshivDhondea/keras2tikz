@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage[x11names, svgnames, rgb]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{snakes,arrows,shapes}
+\usepackage{amsmath}
+%
+%
+
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{0pt}%
+
+%
+
+\begin{document}
+\pagestyle{empty}
+%
+%
+%
+
+\enlargethispage{100cm}
+% Start of code
+\begin{tikzpicture}[>=latex',line join=bevel,]
+%%
+\node (139902118751704) at (62.5bp,2019.0bp) [draw=red,rectangle] {Input};
+  \node (139902118766576) at (62.5bp,1932.0bp) [draw,rectangle] {Conv2D};
+  \node (139902118767416) at (62.5bp,1845.0bp) [draw,rectangle] {Conv2D};
+  \node (139902118773312) at (62.5bp,1758.0bp) [draw,rectangle] {MaxPooling2D 2x2};
+  \node (139902118773872) at (62.5bp,1671.0bp) [draw,rectangle] {Conv2D};
+  \node (139902118774712) at (62.5bp,1584.0bp) [draw,rectangle] {Conv2D};
+  \node (139902118775608) at (62.5bp,1497.0bp) [draw,rectangle] {MaxPooling2D 2x2};
+  \node (139902118782344) at (62.5bp,1410.0bp) [draw,rectangle] {Conv2D};
+  \node (139901237093152) at (62.5bp,1323.0bp) [draw,rectangle] {Conv2D};
+  \node (139901237093936) at (62.5bp,1236.0bp) [draw,rectangle] {Conv2D};
+  \node (139901237094720) at (62.5bp,1149.0bp) [draw,rectangle] {MaxPooling2D 2x2};
+  \node (139901237095280) at (62.5bp,1062.0bp) [draw,rectangle] {Conv2D};
+  \node (139901237096064) at (62.5bp,975.0bp) [draw,rectangle] {Conv2D};
+  \node (139901237002704) at (62.5bp,888.0bp) [draw,rectangle] {Conv2D};
+  \node (139901237003488) at (62.5bp,801.0bp) [draw,rectangle] {MaxPooling2D 2x2};
+  \node (139901237004048) at (62.5bp,714.0bp) [draw,rectangle] {Conv2D};
+  \node (139901237004832) at (62.5bp,627.0bp) [draw,rectangle] {Conv2D};
+  \node (139901237005616) at (62.5bp,540.0bp) [draw,rectangle] {Conv2D};
+  \node (139901237059712) at (62.5bp,453.0bp) [draw,rectangle] {MaxPooling2D 2x2};
+  \node (139901237060216) at (62.5bp,366.0bp) [draw,rectangle] {Flatten};
+  \node (139901237060664) at (62.5bp,279.0bp) [draw,rectangle] {Dense 4096};
+  \node (139901237061336) at (62.5bp,192.0bp) [draw,rectangle] {Dense 4096};
+  \node (139901237062008) at (62.5bp,105.0bp) [draw,rectangle] {Dense 1000};
+  \node (output_node) at (62.5bp,18.0bp) [draw,rectangle] {Output};
+  \draw [->] (139902118751704) ..controls (62.5bp,1989.2bp) and (62.5bp,1973.6bp)  .. (139902118766576);
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (98.5bp,1975.5bp) node {(224, 224, 3)};
+  \draw [->] (139902118766576) ..controls (62.5bp,1902.2bp) and (62.5bp,1886.6bp)  .. (139902118767416);
+  \draw (102.0bp,1888.5bp) node {(224, 224, 64)};
+  \draw [->] (139902118767416) ..controls (62.5bp,1815.2bp) and (62.5bp,1799.6bp)  .. (139902118773312);
+  \draw (102.0bp,1801.5bp) node {(224, 224, 64)};
+  \draw [->] (139902118773312) ..controls (62.5bp,1728.2bp) and (62.5bp,1712.6bp)  .. (139902118773872);
+  \draw (102.0bp,1714.5bp) node {(112, 112, 64)};
+  \draw [->] (139902118773872) ..controls (62.5bp,1641.2bp) and (62.5bp,1625.6bp)  .. (139902118774712);
+  \draw (105.0bp,1627.5bp) node {(112, 112, 128)};
+  \draw [->] (139902118774712) ..controls (62.5bp,1554.2bp) and (62.5bp,1538.6bp)  .. (139902118775608);
+  \draw (105.0bp,1540.5bp) node {(112, 112, 128)};
+  \draw [->] (139902118775608) ..controls (62.5bp,1467.2bp) and (62.5bp,1451.6bp)  .. (139902118782344);
+  \draw (98.5bp,1453.5bp) node {(56, 56, 128)};
+  \draw [->] (139902118782344) ..controls (62.5bp,1380.2bp) and (62.5bp,1364.6bp)  .. (139901237093152);
+  \draw (98.5bp,1366.5bp) node {(56, 56, 256)};
+  \draw [->] (139901237093152) ..controls (62.5bp,1293.2bp) and (62.5bp,1277.6bp)  .. (139901237093936);
+  \draw (98.5bp,1279.5bp) node {(56, 56, 256)};
+  \draw [->] (139901237093936) ..controls (62.5bp,1206.2bp) and (62.5bp,1190.6bp)  .. (139901237094720);
+  \draw (98.5bp,1192.5bp) node {(56, 56, 256)};
+  \draw [->] (139901237094720) ..controls (62.5bp,1119.2bp) and (62.5bp,1103.6bp)  .. (139901237095280);
+  \draw (98.5bp,1105.5bp) node {(28, 28, 256)};
+  \draw [->] (139901237095280) ..controls (62.5bp,1032.2bp) and (62.5bp,1016.6bp)  .. (139901237096064);
+  \draw (98.5bp,1018.5bp) node {(28, 28, 512)};
+  \draw [->] (139901237096064) ..controls (62.5bp,945.19bp) and (62.5bp,929.56bp)  .. (139901237002704);
+  \draw (98.5bp,931.5bp) node {(28, 28, 512)};
+  \draw [->] (139901237002704) ..controls (62.5bp,858.19bp) and (62.5bp,842.56bp)  .. (139901237003488);
+  \draw (98.5bp,844.5bp) node {(28, 28, 512)};
+  \draw [->] (139901237003488) ..controls (62.5bp,771.19bp) and (62.5bp,755.56bp)  .. (139901237004048);
+  \draw (98.5bp,757.5bp) node {(14, 14, 512)};
+  \draw [->] (139901237004048) ..controls (62.5bp,684.19bp) and (62.5bp,668.56bp)  .. (139901237004832);
+  \draw (98.5bp,670.5bp) node {(14, 14, 512)};
+  \draw [->] (139901237004832) ..controls (62.5bp,597.19bp) and (62.5bp,581.56bp)  .. (139901237005616);
+  \draw (98.5bp,583.5bp) node {(14, 14, 512)};
+  \draw [->] (139901237005616) ..controls (62.5bp,510.19bp) and (62.5bp,494.56bp)  .. (139901237059712);
+  \draw (98.5bp,496.5bp) node {(14, 14, 512)};
+  \draw [->] (139901237059712) ..controls (62.5bp,423.19bp) and (62.5bp,407.56bp)  .. (139901237060216);
+  \draw (91.5bp,409.5bp) node {(7, 7, 512)};
+  \draw [->] (139901237060216) ..controls (62.5bp,336.19bp) and (62.5bp,320.56bp)  .. (139901237060664);
+  \draw (86.0bp,322.5bp) node {(25088,)};
+  \draw [->] (139901237060664) ..controls (62.5bp,249.19bp) and (62.5bp,233.56bp)  .. (139901237061336);
+  \draw (82.5bp,235.5bp) node {(4096,)};
+  \draw [->] (139901237061336) ..controls (62.5bp,162.19bp) and (62.5bp,146.56bp)  .. (139901237062008);
+  \draw (82.5bp,148.5bp) node {(4096,)};
+  \draw [->] (139901237062008) ..controls (62.5bp,75.192bp) and (62.5bp,59.561bp)  .. (output_node);
+  \draw (82.5bp,61.5bp) node {(1000,)};
+%
+\end{tikzpicture}
+% End of code
+
+%
+\end{document}
+%
+
+

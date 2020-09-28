@@ -1,11 +1,17 @@
+"""
+Adapted keras2tikz to work in Tensorflow version 2.
+
+Tensorflow version 2.1
+Python 3.6
+Ubuntu 18.04 LTS.
+"""
+import sys
+import os
 import dot2tex as d2t
-import pydot_ng as pydot
-import keras.layers.convolutional
-import keras.layers.recurrent
+import pydot as pydot
+import tensorflow as tf
 
-
-def model_to_dot(model,
-                 rankdir='TB'):
+def model_to_dot(model,rankdir='TB'):
     """Convert a Keras model to dot format.
     # Arguments
         model: A Keras model instance.
@@ -16,15 +22,13 @@ def model_to_dot(model,
     # Returns
         A `pydot.Dot` instance representing the Keras model.
     """
-    from keras.layers.wrappers import Wrapper
-    from keras.models import Sequential
 
     dot = pydot.Dot()
     dot.set('rankdir', rankdir)
     dot.set('concentrate', True)
     dot.set_node_defaults(shape='record')
 
-    if isinstance(model, Sequential):
+    if isinstance(model, tf.keras.models.Sequential):
         if not model.built:
             model.build()
         model = model.model
@@ -37,7 +41,7 @@ def model_to_dot(model,
         # Append a wrapped layer's label to node's label, if it exists.
         layer_name = layer.name
         class_name = layer.__class__.__name__
-        if isinstance(layer, Wrapper):
+        if isinstance(layer, tf.keras.layers.Wrapper):
             layer_name = '{}({})'.format(layer_name, layer.layer.name)
             child_class_name = layer.layer.__class__.__name__
             class_name = '{}({})'.format(class_name, child_class_name)
@@ -53,16 +57,16 @@ def model_to_dot(model,
             label += " " + str(layer.units)
         except AttributeError:
             # Add Convolutions
-            if isinstance(layer, keras.layers.convolutional._Conv):
+            if isinstance(layer, tf.keras.layers.Conv1D):
                 kernel_size = "x".join([str(k) for k in layer.kernel_size])
                 label += " %s,%s" % (kernel_size, str(layer.filters))
 
             # Add pool1d
-            if isinstance(layer, keras.layers.pooling._Pooling1D):
+            if isinstance(layer, tf.keras.layers.MaxPooling1D):
                 label += " " + str(layer.pool_size)
 
             # Add pool2d
-            if isinstance(layer, keras.layers.pooling._Pooling2D):
+            if isinstance(layer, tf.keras.layers.MaxPooling2D):
                 pool_size = [str(k) for k in layer.pool_size]
                 label += " " + "x".join(pool_size)
 
@@ -114,9 +118,12 @@ def gen_tikz_from_model(model):
 
 
 if __name__ == '__main__':
-    from keras import applications
-    model = applications.VGG16(weights=None)
-    tix_code = gen_tikz_from_model(model)
-    tex_file = open("model.tex", 'w')
-    tex_file.write(tex_file)
+    # Either get a Keras-provided model or get your own .h5 file for a Keras model.
+    #model = tf.keras.applications.VGG16(weights=None)
+    keras_model = sys.argv[1] #.h5 file for a Keras model.
+    loaded_model = tf.keras.models.load_model(keras_model)
+    tix_code = gen_tikz_from_model(loaded_model)
+    os.makedirs('tex_output',exist_ok=True)
+    tex_file = open(os.path.join('tex_output',keras_model[:-3]+"_tikz.tex"), 'w')
+    tex_file.write(tix_code)
     tex_file.close()
