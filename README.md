@@ -13,11 +13,11 @@ Keras has a `summary` and a [builtin graphviz export](https://github.com/fcholle
 
 For a VGG16:
 ```shell
-python vgg16_model.h5
+python model_to_tex.py vgg16_model.h5
 ```
 For a ResNet18:
 ```shell
-python resnet18_model.h5
+python model_to_tex.py resnet18_model.h5
 ```
 
 The output .tex file in tex_output can be compiled with pdfLaTeX.
